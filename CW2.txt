@@ -1,0 +1,150 @@
+use EventTracker
+switched to db EventTracker
+db.UpcomingEvents.insertOne({
+  name: "Music Fest",
+  date: new Date(),
+  isFreeEntry: false,
+  ticketPrice: 299.99,
+  performers: ["DJ Max", "Live Band"],
+  location: {
+    city: "Chennai",
+    venue: "Beach Arena"
+  },
+  specialCode: null
+})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69ccee2663a2e5b68ea86d2a')
+}
+db.UpcomingEvents.insertMany([
+  {
+    name: "Tech Conference",
+    date: new Date("2026-06-15"),
+    isFreeEntry: true,
+    ticketPrice: 0,
+    performers: ["Keynote Speaker", "Panel Discussion"],
+    location: {
+      city: "Bangalore",
+      venue: "Convention Center"
+    },
+    specialCode: "TECH2026"
+  },
+  {
+    name: "Food Carnival",
+    date: new Date("2026-07-10"),
+    isFreeEntry: false,
+    ticketPrice: 150,
+    performers: ["Chef Demo", "Live Cooking"],
+    location: {
+      city: "Hyderabad",
+      venue: "City Grounds"
+    },
+    specialCode: null
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69ccee3463a2e5b68ea86d2b'),
+    '1': ObjectId('69ccee3463a2e5b68ea86d2c')
+  }
+}
+show collections
+UpcomingEvents
+db.UpcomingEvents.find()
+{
+  _id: ObjectId('69ccc67e35149ee30ade6252'),
+  name: 'Music Fest',
+  date: 2026-04-01T07:17:18.536Z,
+  isFreeEntry: false,
+  ticketPrice: 299.99,
+  performers: [
+    'DJ Max',
+    'Live Band'
+  ],
+  location: {
+    city: 'Chennai',
+    venue: 'Beach Arena'
+  },
+  specialCode: null
+}
+{
+  _id: ObjectId('69ccc68b35149ee30ade6253'),
+  name: 'Tech Conference',
+  date: 2026-06-15T00:00:00.000Z,
+  isFreeEntry: true,
+  ticketPrice: 0,
+  performers: [
+    'Keynote Speaker',
+    'Panel Discussion'
+  ],
+  location: {
+    city: 'Bangalore',
+    venue: 'Convention Center'
+  },
+  specialCode: 'TECH2026'
+}
+{
+  _id: ObjectId('69ccc68b35149ee30ade6254'),
+  name: 'Food Carnival',
+  date: 2026-07-10T00:00:00.000Z,
+  isFreeEntry: false,
+  ticketPrice: 150,
+  performers: [
+    'Chef Demo',
+    'Live Cooking'
+  ],
+  location: {
+    city: 'Hyderabad',
+    venue: 'City Grounds'
+  },
+  specialCode: null
+}
+{
+  _id: ObjectId('69ccee2663a2e5b68ea86d2a'),
+  name: 'Music Fest',
+  date: 2026-04-01T10:06:30.452Z,
+  isFreeEntry: false,
+  ticketPrice: 299.99,
+  performers: [
+    'DJ Max',
+    'Live Band'
+  ],
+  location: {
+    city: 'Chennai',
+    venue: 'Beach Arena'
+  },
+  specialCode: null
+}
+{
+  _id: ObjectId('69ccee3463a2e5b68ea86d2b'),
+  name: 'Tech Conference',
+  date: 2026-06-15T00:00:00.000Z,
+  isFreeEntry: true,
+  ticketPrice: 0,
+  performers: [
+    'Keynote Speaker',
+    'Panel Discussion'
+  ],
+  location: {
+    city: 'Bangalore',
+    venue: 'Convention Center'
+  },
+  specialCode: 'TECH2026'
+}
+{
+  _id: ObjectId('69ccee3463a2e5b68ea86d2c'),
+  name: 'Food Carnival',
+  date: 2026-07-10T00:00:00.000Z,
+  isFreeEntry: false,
+  ticketPrice: 150,
+  performers: [
+    'Chef Demo',
+    'Live Cooking'
+  ],
+  location: {
+    city: 'Hyderabad',
+    venue: 'City Grounds'
+  },
+  specialCode: null
+}
