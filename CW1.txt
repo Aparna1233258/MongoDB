@@ -1,0 +1,17 @@
+use SchoolLibrary
+switched to db SchoolLibrary
+db.Books.insertOne({
+  title: "Introduction to Science",
+  author: "Dr. Smith",
+  available: true
+})
+{
+  acknowledged: true,
+  insertedId: ObjectId('69ccb4618ef06ce4efa7535c')
+}
+show collections
+Books
+db.Books.drop()
+true
+db.dropDatabase()
+{ ok: 1, dropped: 'SchoolLibrary' }
